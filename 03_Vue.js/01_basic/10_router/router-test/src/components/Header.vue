@@ -6,19 +6,22 @@
     </button>
 
     <div :class="navClass">
-      <!--  :class="navClass" -> navClass 변수에 들어있는 값을 class 속성값으로 사용 -->
+      <!-- :class ="navClass" -> navClass 변수에 들어있는 값을 class 속성값으로 사용 -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <!-- router-link : 라우터 링크 태그 (a태그 역할), to 속성에 이동할 경로 지정 -->
+          <!-- <router-link class="nav-link" to="/">홈</router-link> -->
+          <router-link class="nav-link" :to="{ name: 'home' }">홈</router-link>
 
+          <!-- router-link : 라우터 링크 태그 (a태그 역할), to 속성에 이동할 경로 지정-->
           <!-- <router-link class="nav-link" to="/members">멤버</router-link> -->
           <router-link class="nav-link" :to="{ name: 'members' }"
             >멤버</router-link
           >
-          <!-- :to="{ name: 'members' }"
-           -> 라우터 name을 사용하여 경로 지정하기
-           -> 경로가 바뀌어도 이름은 그대로이기 때문에 코드 수정 안해도 됨
-            -->
+          <!-- :to="{ name: 'memebers' }"
+             -> 라우터 name을 사용하여 경로 지정하기
+             -> 경로가 바뀌어도 이름은 그대로이기 때문에 코드 수정 안해도 됨
+          
+          -->
         </li>
       </ul>
     </div>
