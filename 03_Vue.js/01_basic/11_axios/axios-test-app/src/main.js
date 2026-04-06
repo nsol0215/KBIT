@@ -1,12 +1,13 @@
 import './assets/main.css';
-
-import App from './App1.vue';
 import { createApp } from 'vue';
-// import App from './App.vue';
+
+// import App from './App.vue' ;
+// import App from './App1.vue';
+// import App from './App3.vue';
+// import App from './App4.vue';
+// import App from './App5.vue';
+import App from './App6.vue';
+
 import router from './router';
 
-const app = createApp(App);
-
-app.use(router);
-
-app.mount('#app');
+createApp(App).mount('#app');

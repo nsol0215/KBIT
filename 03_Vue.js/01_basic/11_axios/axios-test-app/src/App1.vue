@@ -46,10 +46,6 @@ const requestAPI = () => {
       axios.get('/api/todos/' + id).then((response) => {
         console.log('## 두번째 Todo :', response.data);
       });
-    })
-
-    .catch((err) => {
-      console.log(err);
     });
 };
 requestAPI(); // 함수 호출
