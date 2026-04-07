@@ -27,12 +27,18 @@ export const useCounterStore = defineStore('counter', () => {
 
   // 계산된 속성(getters) 정의
   const doubleCount = computed(() => count.value * 2);
+  // gettets는 상태값을 바꾸지 않음
 
   // 함수(actions) 정의
   function increment() {
     // 복잡한 로직, 비동기 작업 처리, 상태 변경 등의 코드 작성
     count.value++;
   }
+  // 0으로 초기화
+  function reset() {
+    count.value = 0;
+  }
+
   // 사용할 상태와 메소드 반환
-  return { count, doubleCount, increment };
+  return { count, doubleCount, increment, reset };
 });
