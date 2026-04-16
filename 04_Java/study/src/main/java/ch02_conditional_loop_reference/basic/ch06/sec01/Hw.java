@@ -18,9 +18,10 @@ public class Hw {
 
         // 합계 : 260 점
         // 평균 : 65 점
+
         //-----------------------------------
 
         Scanner sc = new Scanner(System.in);
-        
+
     }
 }
