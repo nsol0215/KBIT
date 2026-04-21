@@ -7,6 +7,8 @@ public class SumFrom1To100Example2 {
         while (num <= 100){
             sum += num;
             num ++;
+
         }
+        System.out.println("1~100까지의합:"+sum);
     }
 }
