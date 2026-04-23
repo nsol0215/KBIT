@@ -1,8 +1,8 @@
-package main.java.ch03_class.basic.oop.model.service;
+package main.java.ch04_inheritance_polymorphism.oop.model.service;
 
-import main.java.ch03_class.basic.oop.model.vo.Apple;
-import main.java.ch03_class.basic.oop.model.vo.Galaxy;
-import main.java.ch03_class.basic.oop.model.vo.Phone;
+import main.java.ch04_inheritance_polymorphism.oop.model.vo.Apple;
+import main.java.ch04_inheritance_polymorphism.oop.model.vo.Galaxy;
+import main.java.ch04_inheritance_polymorphism.oop.model.vo.Phone;
 
 
 public class InheritanceService {
@@ -37,10 +37,10 @@ public class InheritanceService {
         Galaxy galaxy = new Galaxy();
 
         galaxy.pay(); // 오버라이딩 X -> Phone 메서드 수행
-        // main.java.ch03_class.basic.oop.model.vo.Phone
+        // main.java.ch04_inheritance.oop.model.vo.Phone
 
         galaxy.pay(); // 오버라이딩 O -> Galaxy 메서드 수행
-        // main.java.ch03_class.basic.oop.model.vo.Galaxy
+        // main.java.ch04_inheritance.oop.model.vo.Galaxy
 
         System.out.println("----------------------");
         // toString()

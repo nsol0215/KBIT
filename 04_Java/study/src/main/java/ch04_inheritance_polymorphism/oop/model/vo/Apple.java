@@ -1,4 +1,4 @@
-package main.java.ch03_class.basic.oop.model.vo;
+package main.java.ch04_inheritance_polymorphism.oop.model.vo;
 
 public class Apple extends Phone {
     // Apple 클래스에 Phone 클래스의 내용을 확장/연장한다.
@@ -45,6 +45,12 @@ public class Apple extends Phone {
 
     public void setIosVersion(String iosVersion) {
         this.iosVersion = iosVersion;
+    }
+
+    // Phone.pay() 오버라이딩
+    @Override
+    public void pay() {
+        System.out.println("Apple pay로 결제하기");
     }
 
     // Phone.toString() 오버라이딩
