@@ -37,6 +37,5 @@ export default {
   props: {
     todoitem: { type: Object, required: true },
   },
-  emits: ['delete-todo', 'toggle-completed'],
 };
 </script>

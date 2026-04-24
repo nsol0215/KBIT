@@ -23,9 +23,6 @@ export default {
     TodoListItem,
   },
   // props : 부모 컴포넌트에서 전달된 데이터
-  props: {
-    todoList: { type: Array, required: true },
-  },
-  emits: ['delete-todo', 'toggle-completed'],
+  props: ['todolist'],
 };
 </script>

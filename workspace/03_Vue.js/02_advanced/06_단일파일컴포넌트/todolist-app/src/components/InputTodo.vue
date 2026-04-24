@@ -6,34 +6,31 @@
           type="text"
           class="form-control"
           placeholder="할일을 여기에 입력!"
-          v-model.trim="todo"
-          @keyup.enter="addHandler"
+          v-model="todo"
+          @keyup.enter="addTodoHandler"
         />
-        <input type="date" class="form-control" v-model="deadline" />
-        <button class="btn btn-primary" @click="addHandler">추가</button>
+        <span class="btn btn-primary" @click="addTodoHandler">추가</span>
       </div>
     </div>
   </div>
 </template>
-
 <script>
+import { ref } from 'vue';
 export default {
   name: 'InputTodo',
-  data() {
-    return {
-      todo: '',
-    };
-  },
   emits: ['add-todo'],
-  methods: {
-    addHandler() {
-      if (this.todo.trim().length >= 2) {
-        this.$emit('add-todo', this.todo);
-        this.todo = '';
-      } else {
-        alert('할 일을 2글자 이상 입력해주세요!');
+  setup(props, { emit }) {
+    const todo = ref('');
+    const addTodoHandler = () => {
+      if (todo.value.length >= 3) {
+        emit('add-todo', todo.value);
+        todo.value = '';
       }
-    },
+    };
+    return {
+      todo,
+      addTodoHandler,
+    };
   },
 };
 </script>

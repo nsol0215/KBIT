@@ -17,25 +17,6 @@ export default {
       ],
     };
   },
-  methods: {
-    addTodo(todo) {
-      if (todo.length >= 2) {
-        this.todoList.push({
-          id: new Date().getTime(),
-          todo: todo,
-          completed: false,
-        });
-      }
-    },
-    deleteTodo(id) {
-      let index = this.todoList.findIndex((item) => id === item.id);
-      this.todoList.splice(index, 1);
-    },
-    toggleCompleted(id) {
-      let index = this.todoList.findIndex((item) => id === item.id);
-      this.todoList[index].completed = !this.todoList[index].completed;
-    },
-  },
 };
 </script>
 
@@ -46,18 +27,16 @@ export default {
     </div>
     <div class="card card-default card-borderless">
       <div class="card-body">
-        <InputTodo @add-todo="addTodo" />
+        <InputTodo />
 
         <!-- 목록 컴포넌트
          props를 이용해서 todolist를 자식 컴포넌트로 전달
           -->
-        <TodoList
-          :todoList="todoList"
-          @delete-todo="deleteTodo"
-          @toggle-completed="toggleCompleted"
-        />
+        <TodoList: todolist="todolist" />
         <!-- todolist -> 자식에게 todolist라는 속성으로 todolist(데이터) 데이터 전달 -->
       </div>
     </div>
   </div>
 </template>
+
+<style scoped></style>
