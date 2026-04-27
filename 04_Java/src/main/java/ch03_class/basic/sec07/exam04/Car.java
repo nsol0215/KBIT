@@ -23,4 +23,8 @@ public class Car {
         this.color = color;
         this.maxSpeed = maxSpeed;
     }
+
+    public String company() {
+        return null;
+    }
 }
